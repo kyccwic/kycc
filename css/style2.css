@@ -407,7 +407,7 @@ body::-webkit-scrollbar {
     --c: #1a2f3f; 
     border-image: 
         conic-gradient(from 45deg at calc(100% - 1lh), #0000 25%, var(--c) 0) 
-        fill 0 // 0 0 0 100vw;
+        fill 0 0 0 0 100vw;
     color: white;
     padding-right: 1.3lh;
     line-height: 1.5em;
@@ -454,7 +454,7 @@ body::-webkit-scrollbar {
       --c: #C9CC3F; 
     border-image:
     conic-gradient(from 45deg at calc(100% - 1lh), #0000 25%, var(--c) 0)
-    fill 0//0 0 0 0vw;
+    fill 0 0 0 0 0vw;
 	padding-right: .1lh;
 	width: 50%;
 }
