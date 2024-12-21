@@ -1613,7 +1613,7 @@ body::-webkit-scrollbar {
             left: 0;
             right: 0;
             height: 160px;
-            background: url('images/untitled-9.png') no-repeat center center;
+            background: url('images/footer.png') no-repeat center center;
             background-size: cover;
             display: flex;
             align-items: center;
