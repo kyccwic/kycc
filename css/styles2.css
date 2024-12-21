@@ -238,7 +238,7 @@ body::-webkit-scrollbar {
 
 
 #home {
-    background: url('/images/1.webp') no-repeat center center;
+    background: url('../images/1.webp') no-repeat center center;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -1131,7 +1131,7 @@ body::-webkit-scrollbar {
         }
    
           #agenda {
-            background: url('images/campus4.webp');
+            background: url('../images/campus4.webp');
 		              
             padding-bottom: 40px;
 	    background-position: center;
@@ -1613,7 +1613,7 @@ body::-webkit-scrollbar {
             left: 0;
             right: 0;
             height: 160px;
-            background: url('images/footer.png') no-repeat center center;
+            background: url('images/../footer.png') no-repeat center center;
             background-size: cover;
             display: flex;
             align-items: center;
@@ -1764,7 +1764,7 @@ li:last-child {
 }
 
 .career-fair-section {
- background: url('images/AdobeStock_55123425.webp') no-repeat center center;
+ background: url('../images/AdobeStock_55123425.webp') no-repeat center center;
     background-attachment: fixed;
     background-position: center;
     background-size: auto 100%;
@@ -1831,7 +1831,7 @@ li:last-child {
         }
 		@media (max-width: 700px) {
     #home {
-        background: url('images/1b.webp') no-repeat center center;
+        background: url('../images/1b.webp') no-repeat center center;
         background-position: center;
         background-repeat: no-repeat;
         background-size: cover;
