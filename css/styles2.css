@@ -1,3 +1,4 @@
+
 * {
   margin: 0;
   padding: 0;
@@ -1398,7 +1399,7 @@ body::-webkit-scrollbar {
 #speakers .contentright {
     position: relative;
     box-sizing: border-box;
-    height: 310px;
+    height: 300px;
     width: 69%;
     left: 20%;
     padding: 20px;
@@ -1433,7 +1434,7 @@ body::-webkit-scrollbar {
     text-align: left;
     padding: 0 20px;
 	position: relative;
-	max-height: 260px;
+	max-height: 300px;
     scrollbar-width: none; 
     -ms-overflow-style: none; 
     box-sizing: border-box;
