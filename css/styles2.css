@@ -1509,7 +1509,7 @@ body::-webkit-scrollbar {
     margin: 0 auto;
 	scroll-margin-top: 70px;
 	   
-    background: url('images/AdobeStock_55123425.webp') no-repeat center center;
+    background: url('../images/AdobeStock_55123425.webp') no-repeat center center;
     background-size: cover;
     width: 100%;
     height: 100vh;
