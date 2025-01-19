@@ -1522,7 +1522,7 @@ body::-webkit-scrollbar {
     justify-content: center; 
     gap: 20px; 
     width: 100%;
-    max-width: 800px; 
+    max-width: 850px; 
 	background-color: rgba(0, 0, 0, 0);
 }
 
