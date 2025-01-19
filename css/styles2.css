@@ -1398,7 +1398,7 @@ body::-webkit-scrollbar {
 #speakers .contentright {
     position: relative;
     box-sizing: border-box;
-    height: 320px;
+    height: 300px;
     width: 69%;
     left: 20%;
     padding: 20px;
@@ -1456,7 +1456,7 @@ body::-webkit-scrollbar {
     align-items: center; 
     position: relative;
     overflow: hidden;
-    height: 350px; 
+    height: 360px; 
     transition: height 0.5s ease;
 }
 
