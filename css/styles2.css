@@ -865,7 +865,7 @@ body::-webkit-scrollbar {
             bottom: -10px;
             z-index: -1;
             border: 10px solid transparent;
-            border-right-color: #0033a0;
+            border-right-color: #043140;
 
             -webkit-animation: edge 500ms;
             -moz-animation: edge 500ms;
@@ -877,7 +877,7 @@ body::-webkit-scrollbar {
             left: auto;
             right: -10px;
             border-right-color: transparent;
-            border-left-color: #0033a0;
+            border-left-color: #043140;
         }
 
         .blueribbon i:nth-child(3), .blueribbon i:last-child {
@@ -903,7 +903,7 @@ body::-webkit-scrollbar {
             bottom: -10px;
             left: auto;
             right: -20px;
-            border: 15px solid #75767A;
+            border: 15px solid #0033a0;
             border-right-color: transparent;
 
             -webkit-transform-origin: 0 0;
