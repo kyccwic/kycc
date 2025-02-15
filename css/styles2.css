@@ -827,7 +827,90 @@ body::-webkit-scrollbar {
             transform-origin: 0 0;
         }
 
-		
+				   .blueribbon {
+            width: 100px; 
+            height: 30px; 
+            margin: 20px auto 0px;
+            position: relative;
+            
+            font: 14px/30px sans-serif; 
+            text-align: center;
+            text-transform: uppercase;
+            background: #0033a0;
+ color: #A8A9AD;
+            text-shadow: -2px 2px 4px rgba(0, 0, 0, 0.5),
+                2px -2px 0 rgba(255, 255, 255, 0.9);
+            -webkit-animation: main 250ms;
+            -moz-animation: main 250ms;
+            -ms-animation: main 250ms;
+            animation: main 250ms;
+        }
+#sponsors .grid-item img:hover + .bluenoteribbon {
+    opacity: 1; 
+    transform: scale(1); 
+    animation: ribbonAnimation 0.5s ease; 
+}
+
+@keyframes ribbonAnimation {
+    0% { transform: scale(0.9); opacity: 0; }
+    100% { transform: scale(1); opacity: 1; }
+}
+        .blueribbon i {
+            position: absolute;
+        }
+
+        .blueribbon i:first-child, .blueribbon i:nth-child(2) {
+            position: absolute;
+            left: -10px;
+            bottom: -10px;
+            z-index: -1;
+            border: 10px solid transparent;
+            border-right-color: #043140;
+
+            -webkit-animation: edge 500ms;
+            -moz-animation: edge 500ms;
+            -ms-animation: edge 500ms;
+            animation: edge 500ms;
+        }
+
+        .blueribbon i:nth-child(2) {
+            left: auto;
+            right: -10px;
+            border-right-color: transparent;
+            border-left-color: #043140;
+        }
+
+        .blueribbon i:nth-child(3), .blueribbon i:last-child {
+            width: 10px;
+            bottom: -10px;
+            left: -20px;
+            z-index: -2;
+            border: 15px solid #75767A;
+            border-left-color: transparent;
+
+            -webkit-animation: back 600ms;
+            -moz-animation: back 600ms;
+            -ms-animation: back 600ms;
+            animation: back 600ms;
+
+            -webkit-transform-origin: 100% 0;
+            -moz-transform-origin: 100% 0;
+            -ms-transform-origin: 100% 0;
+            transform-origin: 100% 0;
+        }
+
+        .blueribbon i:last-child {
+            bottom: -10px;
+            left: auto;
+            right: -20px;
+            border: 15px solid #75767A;
+            border-right-color: transparent;
+
+            -webkit-transform-origin: 0 0;
+            -moz-transform-origin: 0 0;
+            -ms-transform-origin: 0 0;
+            transform-origin: 0 0;
+        }
    .platinumribbon {
             width: 100px; 
             height: 30px; 
