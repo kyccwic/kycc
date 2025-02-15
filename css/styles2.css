@@ -885,7 +885,7 @@ body::-webkit-scrollbar {
             bottom: -10px;
             left: -20px;
             z-index: -2;
-            border: 15px solid #75767A;
+            border: 15px solid #043140;
             border-left-color: transparent;
 
             -webkit-animation: back 600ms;
