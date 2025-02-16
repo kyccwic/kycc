@@ -1177,7 +1177,7 @@ body::-webkit-scrollbar {
             font: 14px/30px sans-serif; 
             text-align: center;
             text-transform: uppercase;
-            background:#9400d3;
+            background:#9370db;
  color: #000;
             text-shadow:     -3px 3px 5px rgba(0, 0, 0, 0.7), 
     3px -3px 1px rgba(255, 255, 255, 1);
@@ -1244,7 +1244,7 @@ body::-webkit-scrollbar {
             bottom: -10px;
             left: auto;
             right: -20px;
-            border: 15px solid #9400d3;
+            border: 15px solid#9370db;
             border-right-color: transparent;
 
             -webkit-transform-origin: 0 0;
