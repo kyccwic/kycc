@@ -836,7 +836,7 @@ body::-webkit-scrollbar {
             font: 14px/30px sans-serif; 
             text-align: center;
             text-transform: uppercase;
-            background: #0033a0;
+            background: #add8e6;
  color: gold;
             text-shadow: -2px 2px 4px rgba(0, 0, 0, 0.5),
                 2px -2px 0 rgba(255, 255, 255, 0.9);
@@ -877,7 +877,7 @@ body::-webkit-scrollbar {
             left: auto;
             right: -10px;
             border-right-color: transparent;
-            border-left-color: #0033a0;
+            border-left-color: #add8e6;
         }
 
         .blueribbon i:nth-child(3), .blueribbon i:last-child {
@@ -885,7 +885,7 @@ body::-webkit-scrollbar {
             bottom: -10px;
             left: -20px;
             z-index: -2;
-            border: 15px solid #0033a0;
+            border: 15px solid #add8e6;
             border-left-color: transparent;
 
             -webkit-animation: back 600ms;
@@ -903,7 +903,7 @@ body::-webkit-scrollbar {
             bottom: -10px;
             left: auto;
             right: -20px;
-            border: 15px solid #0033a0;
+            border: 15px solid #add8e6;
             border-right-color: transparent;
 
             -webkit-transform-origin: 0 0;
