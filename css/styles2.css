@@ -877,7 +877,7 @@ body::-webkit-scrollbar {
             left: auto;
             right: -10px;
             border-right-color: transparent;
-            border-left-color: #add8e6;
+            border-left-color:#043140;
         }
 
         .blueribbon i:nth-child(3), .blueribbon i:last-child {
