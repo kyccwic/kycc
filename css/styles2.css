@@ -1168,6 +1168,91 @@ body::-webkit-scrollbar {
             transform-origin: 0 0;
         }
 
+  .presenterribbon {
+            width: 100px; 
+            height: 30px; 
+            margin: 20px auto 0px;
+            position: relative;
+           
+            font: 14px/30px sans-serif; 
+            text-align: center;
+            text-transform: uppercase;
+            background:#9400d3;
+ color: #000;
+            text-shadow:     -3px 3px 5px rgba(0, 0, 0, 0.7), 
+    3px -3px 1px rgba(255, 255, 255, 1);
+            -webkit-animation: main 250ms;
+            -moz-animation: main 250ms;
+            -ms-animation: main 250ms;
+            animation: main 250ms;
+        }
+#sponsors .grid-item img:hover + .presenterribbon {
+    opacity: 1; 
+    transform: scale(1); 
+    animation: ribbonAnimation 0.5s ease; 
+}
+
+@keyframes ribbonAnimation {
+    0% { transform: scale(0.9); opacity: 0; }
+    100% { transform: scale(1); opacity: 1; }
+}
+        .presenterribbon i {
+            position: absolute;
+        }
+
+        .presenterribbon i:first-child, .presenterribbon i:nth-child(2) {
+            position: absolute;
+            left: -10px;
+            bottom: -10px;
+            z-index: -1;
+            border: 10px solid transparent;
+            border-right-color: #1a2f3f;
+
+            -webkit-animation: edge 500ms;
+            -moz-animation: edge 500ms;
+            -ms-animation: edge 500ms;
+            animation: edge 500ms;
+        }
+
+        .presenterribbon i:nth-child(2) {
+            left: auto;
+            right: -10px;
+            border-right-color: transparent;
+            border-left-color: #043140;
+        }
+
+        .presenterribbon i:nth-child(3), .presenterribbon i:last-child {
+            width: 10px;
+            bottom: -10px;
+            left: -20px;
+            z-index: -2;
+            border: 15px solid #9400d3;
+            border-left-color: transparent;
+
+            -webkit-animation: back 600ms;
+            -moz-animation: back 600ms;
+            -ms-animation: back 600ms;
+            animation: back 600ms;
+
+            -webkit-transform-origin: 100% 0;
+            -moz-transform-origin: 100% 0;
+            -ms-transform-origin: 100% 0;
+            transform-origin: 100% 0;
+        }
+
+        .presenterribbon i:last-child {
+            bottom: -10px;
+            left: auto;
+            right: -20px;
+            border: 15px solid #9400d3;
+            border-right-color: transparent;
+
+            -webkit-transform-origin: 0 0;
+            -moz-transform-origin: 0 0;
+            -ms-transform-origin: 0 0;
+            transform-origin: 0 0;
+        }
+
         @-webkit-keyframes main {
             0% { -webkit-transform: scaleX(0); }
             100% { -webkit-transform: scaleX(1); }
