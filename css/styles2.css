@@ -826,6 +826,90 @@ body::-webkit-scrollbar {
             -ms-transform-origin: 0 0;
             transform-origin: 0 0;
         }
+		   .doorribbon {
+            width: 100px; 
+            height: 30px; 
+            margin: 20px auto 0px;
+            position: relative;
+            
+            font: 14px/30px sans-serif; 
+            text-align: center;
+            text-transform: uppercase;
+            background: #d1d1f6;
+ color: #A8A9AD;
+            text-shadow: -2px 2px 4px rgba(0, 0, 0, 0.5),
+                2px -2px 0 rgba(255, 255, 255, 0.9);
+            -webkit-animation: main 250ms;
+            -moz-animation: main 250ms;
+            -ms-animation: main 250ms;
+            animation: main 250ms;
+        }
+#sponsors .grid-item img:hover + .doornoteribbon {
+    opacity: 1; 
+    transform: scale(1); 
+    animation: ribbonAnimation 0.5s ease; 
+}
+
+@keyframes ribbonAnimation {
+    0% { transform: scale(0.9); opacity: 0; }
+    100% { transform: scale(1); opacity: 1; }
+}
+        .doorribbon i {
+            position: absolute;
+        }
+
+        .doorribbon i:first-child, .doorribbon i:nth-child(2) {
+            position: absolute;
+            left: -10px;
+            bottom: -10px;
+            z-index: -1;
+            border: 10px solid transparent;
+            border-right-color: #043140;
+
+            -webkit-animation: edge 500ms;
+            -moz-animation: edge 500ms;
+            -ms-animation: edge 500ms;
+            animation: edge 500ms;
+        }
+
+        .doorribbon i:nth-child(2) {
+            left: auto;
+            right: -10px;
+            border-right-color: transparent;
+            border-left-color: #043140;
+        }
+
+        .doorribbon i:nth-child(3), .doorribbon i:last-child {
+            width: 10px;
+            bottom: -10px;
+            left: -20px;
+            z-index: -2;
+            border: 15px solid #bcbcf2;
+            border-left-color: transparent;
+
+            -webkit-animation: back 600ms;
+            -moz-animation: back 600ms;
+            -ms-animation: back 600ms;
+            animation: back 600ms;
+
+            -webkit-transform-origin: 100% 0;
+            -moz-transform-origin: 100% 0;
+            -ms-transform-origin: 100% 0;
+            transform-origin: 100% 0;
+        }
+
+        .doorribbon i:last-child {
+            bottom: -10px;
+            left: auto;
+            right: -20px;
+            border: 15px solid #bcbcf2;
+            border-right-color: transparent;
+
+            -webkit-transform-origin: 0 0;
+            -moz-transform-origin: 0 0;
+            -ms-transform-origin: 0 0;
+            transform-origin: 0 0;
+        }
 
 				   .blueribbon {
             width: 100px; 
