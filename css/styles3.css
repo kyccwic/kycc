@@ -604,199 +604,784 @@ body::-webkit-scrollbar {
 
 
 	    
+		       #sponsors {
+            max-width: 800px; 
+            margin: auto; 
+            min-height: 100vh;
+            padding-top: 35px;
+			scroll-margin-top: 75px;
+        }
+		
+		       .sponsorlogo {
+            --s: 140px;
+            
+            width: var(--s);
+            height: var(--s);
+            border-radius: 50%; 
+            display: flex;
+            align-items: center; 
+            justify-content: center; 
+            position: relative;
+            transition: box-shadow 0.3s;
+        }
+		
+		        .sponsorlogo:hover {
+            box-shadow: 0 0 0 5px #1A2F3F, 0 0 0 10px #4E91F0;
+            background: transparent;
+        }
+		
+		        .grid-item img {
+            max-width: 80%; 
+            opacity: 0.8; 
+            transition: opacity 0.3s, transform 0.3s ease;
+			padding-bottom:5px;
+        }
+		
+		        .grid-item a:hover img {
+            opacity: 1;
+            transform: scale(0.9);
+        }
 
-
-#sponsors {
-    max-width: 800px; 
-    margin: auto; 
-    min-height: 100vh;
-    padding-top: 35px;
-    scroll-margin-top: 75px;
+        #sponsors .grid-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            grid-gap: 35px;
+            justify-items: center;
+            text-align: center;
+			border: 1px solid black;
+            padding:20px;
+			margin:30px;
+            border-radius:25px;	
+			background-color: white;
+        }
+		
+		        #sponsors .grid-item {
+            display: flex;
+            flex-direction: column; 
+            align-items: center;
+            width: 200px;
+            height: auto;
+            background-color: white;
+			z-index:3;
+			
+        }
+		
+		.sponsorribbonlarge {
+  width: 40%;
+  height: 60px;
+  margin: 20px auto 20px;
+  position: relative;
+  
+  font: 18px/60px sans-serif;
+  text-align: center;
+  text-transform: uppercase;
+  background: #228B22;
+            color: #228B22;
+            text-shadow: -2px 2px 4px rgba(0, 0, 0, 0.5),
+                2px -2px 0 rgba(255, 255, 255, 0.9);
+  -webkit-animation: main 250ms;
+  -moz-animation: main 250ms;
+  -ms-animation: main 250ms;
+  animation: main 250ms;
 }
 
-.sponsorlogo {
-    --s: 140px;
-    width: var(--s);
-    height: var(--s);
-    border-radius: 50%; 
-    display: flex;
-    align-items: center; 
-    justify-content: center; 
-    position: relative;
-    transition: box-shadow 0.3s;
+.sponsorribbonlarge i {
+  position: absolute;
 }
 
-.grid-item img {
-    max-width: 80%; 
-    opacity: 0.8; 
-    transition: opacity 0.3s, transform 0.3s ease;
-    padding-bottom: 5px;
+.sponsorribbonlarge i:first-child, .sponsorribbonlarge i:nth-child(2) {
+  position: absolute;
+  left: -20px;
+  bottom: -20px;
+  z-index: -1;
+  border: 20px solid transparent;
+  border-right-color: #043140;
+  
+  -webkit-animation: edge 500ms;
+  -moz-animation: edge 500ms;
+  -ms-animation: edge 500ms;
+  animation: edge 500ms;
 }
 
-#sponsors .grid-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    grid-gap: 35px;
-    justify-items: center;
-    text-align: center;
-    border: 1px solid black;
-    padding: 20px;
-    margin: 30px;
-    border-radius: 25px;	
-    background-color: white;
+.sponsorribbonlarge i:nth-child(2) {
+  left: auto;
+  right: -20px;
+  border-right-color: transparent;
+  border-left-color: #043140;
 }
 
-#sponsors .grid-item {
-    display: flex;
-    flex-direction: column; 
-    align-items: center;
-    width: 200px;
-    height: auto;
-    background-color: white;
-    z-index: 3;
+.sponsorribbonlarge i:nth-child(3), .sponsorribbonlarge i:last-child {
+  width: 20px;
+  bottom: -20px;
+  left: -40px;
+  z-index: -2;
+  border: 30px solid #176617;
+  border-left-color: transparent;
+  
+  -webkit-animation: back 600ms;
+  -moz-animation: back 600ms;
+  -ms-animation: back 600ms;
+  animation: back 600ms;
+  
+  -webkit-transform-origin: 100% 0;
+  -moz-transform-origin: 100% 0;
+  -ms-transform-origin: 100% 0;
+  transform-origin: 100% 0;
 }
 
-.sponsorribbonlarge {
-    width: 40%;
-    height: 60px;
-    margin: 20px auto;
-    position: relative;
-    font: 18px/60px sans-serif;
-    text-align: center;
-    text-transform: uppercase;
-    background: #228B22;
-    color: #228B22;
-    text-shadow: -2px 2px 4px rgba(0, 0, 0, 0.5),
-                 2px -2px 0 rgba(255, 255, 255, 0.9);
-    animation: main 250ms;
-}
+.sponsorribbonlarge i:last-child {
+  bottom: -20px;
+  left: auto;
+  right: -40px;
+  border: 30px solid #176617;
+  border-right-color: transparent;
 
-.silverribbon, .doorribbon, .blueribbon, .platinumribbon, .goldribbon, .keynoteribbon, .presenterribbon {
-    opacity: 0; /* Hidden by default */
-    transition: opacity 0.5s ease; /* Smooth transition */
+  -webkit-transform-origin: 0 0;
+  -moz-transform-origin: 0 0;
+  -ms-transform-origin: 0 0;
+  transform-origin: 0 0;
 }
-
-.silverribbon.animate, .doorribbon.animate, .blueribbon.animate, .platinumribbon.animate, .goldribbon.animate, .keynoteribbon.animate, .presenterribbon.animate {
-    opacity: 1; /* Visible when animated */
-}
-
-.silverribbon {
-    width: 100px; 
-    height: 30px; 
-    margin: 20px auto 0px;
-    position: relative;
-    font: 14px/30px sans-serif; 
-    text-align: center;
-    text-transform: uppercase;
-    background: #A8A9AD;
-    color: #A8A9AD;
-    text-shadow: -2px 2px 4px rgba(0, 0, 0, 0.5),
-                 2px -2px 0 rgba(255, 255, 255, 0.9);
-}
-
-.doorribbon {
-    width: 100px; 
-    height: 30px; 
-    margin: 20px auto 0px;
-    position: relative;
-    font: 14px/30px sans-serif; 
-    text-align: center;
-    text-transform: uppercase;
-    background: #d1d1f6;
-    color: #A8A9AD;
-    text-shadow: -2px 2px 4px rgba(0, 0, 0, 0.5),
-                 2px -2px 0 rgba(255, 255, 255, 0.9);
-}
-
-.blueribbon {
-    width: 100px; 
-    height: 30px; 
-    margin: 20px auto 0px;
-    position: relative;
-    font: 14px/30px sans-serif; 
-    text-align: center;
-    text-transform: uppercase;
-    background: #add8e6;
-    color: gold;
-    text-shadow: -2px 2px 4px rgba(0, 0, 0, 0.5),
-                 2px -2px 0 rgba(255, 255, 255, 0.9);
-}
-
-.platinumribbon {
-    width: 100px; 
-    height: 30px; 
-    margin: 20px auto 0px;
-    position: relative;
-    font: 14px/30px sans-serif; 
-    text-align: center;
-    text-transform: uppercase;
-    background: #d3d2cc;
-    color: #d3d2cc;
-    text-shadow: -2px 2px 4px rgba(0, 0, 0, 0.5),
-                 2px -2px 0 rgba(255, 255, 255, 0.9);
-}
-
-.goldribbon {
-    width: 100px; 
-    height: 30px; 
-    margin: 20px auto 0px;
-    position: relative;
-    font: 14px/30px sans-serif; 
-    text-align: center;
-    text-transform: uppercase;
-    background: #d4af37;
-    color: #d4af37;
-    text-shadow: -2px 2px 4px rgba(0, 0, 0, 0.5),
-                 2px -2px 0 rgba(255, 255, 255, 0.9);
-}
-
-.keynoteribbon {
-    width: 100px; 
-    height: 30px; 
-    margin: 20px auto 0px;
-    position: relative;
-    font: 14px/30px sans-serif; 
-    text-align: center;
-    text-transform: uppercase;
-    background: #ADD8E6;
-    color: #000;
-    text-shadow: -3px 3px 5px rgba(0, 0, 0, 0.7), 
-                 3px -3px 1px rgba(255, 255, 255, 1);
-}
-
-.presenterribbon {
-    width: 100px; 
-    height: 30px; 
-    margin: 20px auto 0px;
-    position: relative;
-    font: 14px/30px sans-serif; 
-    text-align: center;
-    text-transform: uppercase;
-    background: #ffcc99;
-    color: #000;
-    text-shadow: -3px 3px 5px rgba(0, 0, 0, 0.7), 
-                 3px -3px 1px rgba(255, 255, 255, 1);
+		
+		   .silverribbon {
+            width: 100px; 
+            height: 30px; 
+            margin: 20px auto 0px;
+            position: relative;
+            
+            font: 14px/30px sans-serif; 
+            text-align: center;
+            text-transform: uppercase;
+            background: #A8A9AD;
+ color: #A8A9AD;
+            text-shadow: -2px 2px 4px rgba(0, 0, 0, 0.5),
+                2px -2px 0 rgba(255, 255, 255, 0.9);
+            -webkit-animation: main 250ms;
+            -moz-animation: main 250ms;
+            -ms-animation: main 250ms;
+            animation: main 250ms;
+        }
+#sponsors .grid-item img:hover + .silvernoteribbon {
+    opacity: 1; 
+    transform: scale(1); 
+    animation: ribbonAnimation 0.5s ease; 
 }
 
 @keyframes ribbonAnimation {
     0% { transform: scale(0.9); opacity: 0; }
     100% { transform: scale(1); opacity: 1; }
 }
+        .silverribbon i {
+            position: absolute;
+        }
 
-@keyframes main {
-    0% { transform: scaleX(0); }
-    100% { transform: scaleX(1); }
+        .silverribbon i:first-child, .silverribbon i:nth-child(2) {
+            position: absolute;
+            left: -10px;
+            bottom: -10px;
+            z-index: -1;
+            border: 10px solid transparent;
+            border-right-color: #043140;
+
+            -webkit-animation: edge 500ms;
+            -moz-animation: edge 500ms;
+            -ms-animation: edge 500ms;
+            animation: edge 500ms;
+        }
+
+        .silverribbon i:nth-child(2) {
+            left: auto;
+            right: -10px;
+            border-right-color: transparent;
+            border-left-color: #043140;
+        }
+
+        .silverribbon i:nth-child(3), .silverribbon i:last-child {
+            width: 10px;
+            bottom: -10px;
+            left: -20px;
+            z-index: -2;
+            border: 15px solid #75767A;
+            border-left-color: transparent;
+
+            -webkit-animation: back 600ms;
+            -moz-animation: back 600ms;
+            -ms-animation: back 600ms;
+            animation: back 600ms;
+
+            -webkit-transform-origin: 100% 0;
+            -moz-transform-origin: 100% 0;
+            -ms-transform-origin: 100% 0;
+            transform-origin: 100% 0;
+        }
+
+        .silverribbon i:last-child {
+            bottom: -10px;
+            left: auto;
+            right: -20px;
+            border: 15px solid #75767A;
+            border-right-color: transparent;
+
+            -webkit-transform-origin: 0 0;
+            -moz-transform-origin: 0 0;
+            -ms-transform-origin: 0 0;
+            transform-origin: 0 0;
+        }
+		   .doorribbon {
+            width: 100px; 
+            height: 30px; 
+            margin: 20px auto 0px;
+            position: relative;
+            
+            font: 14px/30px sans-serif; 
+            text-align: center;
+            text-transform: uppercase;
+            background: #d1d1f6;
+ color: #A8A9AD;
+            text-shadow: -2px 2px 4px rgba(0, 0, 0, 0.5),
+                2px -2px 0 rgba(255, 255, 255, 0.9);
+            -webkit-animation: main 250ms;
+            -moz-animation: main 250ms;
+            -ms-animation: main 250ms;
+            animation: main 250ms;
+        }
+#sponsors .grid-item img:hover + .doornoteribbon {
+    opacity: 1; 
+    transform: scale(1); 
+    animation: ribbonAnimation 0.5s ease; 
 }
 
-@keyframes edge {
-    0%, 50% { transform: scaleY(0); }
-    100% { transform: scaleY(1); }
+@keyframes ribbonAnimation {
+    0% { transform: scale(0.9); opacity: 0; }
+    100% { transform: scale(1); opacity: 1; }
+}
+        .doorribbon i {
+            position: absolute;
+        }
+
+        .doorribbon i:first-child, .doorribbon i:nth-child(2) {
+            position: absolute;
+            left: -10px;
+            bottom: -10px;
+            z-index: -1;
+            border: 10px solid transparent;
+            border-right-color: #043140;
+
+            -webkit-animation: edge 500ms;
+            -moz-animation: edge 500ms;
+            -ms-animation: edge 500ms;
+            animation: edge 500ms;
+        }
+
+        .doorribbon i:nth-child(2) {
+            left: auto;
+            right: -10px;
+            border-right-color: transparent;
+            border-left-color: #043140;
+        }
+
+        .doorribbon i:nth-child(3), .doorribbon i:last-child {
+            width: 10px;
+            bottom: -10px;
+            left: -20px;
+            z-index: -2;
+            border: 15px solid #bcbcf2;
+            border-left-color: transparent;
+
+            -webkit-animation: back 600ms;
+            -moz-animation: back 600ms;
+            -ms-animation: back 600ms;
+            animation: back 600ms;
+
+            -webkit-transform-origin: 100% 0;
+            -moz-transform-origin: 100% 0;
+            -ms-transform-origin: 100% 0;
+            transform-origin: 100% 0;
+        }
+
+        .doorribbon i:last-child {
+            bottom: -10px;
+            left: auto;
+            right: -20px;
+            border: 15px solid #bcbcf2;
+            border-right-color: transparent;
+
+            -webkit-transform-origin: 0 0;
+            -moz-transform-origin: 0 0;
+            -ms-transform-origin: 0 0;
+            transform-origin: 0 0;
+        }
+
+				   .blueribbon {
+            width: 100px; 
+            height: 30px; 
+            margin: 20px auto 0px;
+            position: relative;
+            
+            font: 14px/30px sans-serif; 
+            text-align: center;
+            text-transform: uppercase;
+            background: #add8e6;
+ color: gold;
+            text-shadow: -2px 2px 4px rgba(0, 0, 0, 0.5),
+                2px -2px 0 rgba(255, 255, 255, 0.9);
+            -webkit-animation: main 250ms;
+            -moz-animation: main 250ms;
+            -ms-animation: main 250ms;
+            animation: main 250ms;
+        }
+#sponsors .grid-item img:hover + .bluenoteribbon {
+    opacity: 1; 
+    transform: scale(1); 
+    animation: ribbonAnimation 0.5s ease; 
 }
 
-@keyframes back {
-    0%, 75% { transform: scaleX(0); }
-    100% { transform: scaleX(1); }
+@keyframes ribbonAnimation {
+    0% { transform: scale(0.9); opacity: 0; }
+    100% { transform: scale(1); opacity: 1; }
 }
+        .blueribbon i {
+            position: absolute;
+        }
+
+        .blueribbon i:first-child, .blueribbon i:nth-child(2) {
+            position: absolute;
+            left: -10px;
+            bottom: -10px;
+            z-index: -1;
+            border: 10px solid transparent;
+            border-right-color: #043140;
+
+            -webkit-animation: edge 500ms;
+            -moz-animation: edge 500ms;
+            -ms-animation: edge 500ms;
+            animation: edge 500ms;
+        }
+
+        .blueribbon i:nth-child(2) {
+            left: auto;
+            right: -10px;
+            border-right-color: transparent;
+            border-left-color:#043140;
+        }
+
+        .blueribbon i:nth-child(3), .blueribbon i:last-child {
+            width: 10px;
+            bottom: -10px;
+            left: -20px;
+            z-index: -2;
+            border: 15px solid #add8e6;
+            border-left-color: transparent;
+
+            -webkit-animation: back 600ms;
+            -moz-animation: back 600ms;
+            -ms-animation: back 600ms;
+            animation: back 600ms;
+
+            -webkit-transform-origin: 100% 0;
+            -moz-transform-origin: 100% 0;
+            -ms-transform-origin: 100% 0;
+            transform-origin: 100% 0;
+        }
+
+        .blueribbon i:last-child {
+            bottom: -10px;
+            left: auto;
+            right: -20px;
+            border: 15px solid #add8e6;
+            border-right-color: transparent;
+
+            -webkit-transform-origin: 0 0;
+            -moz-transform-origin: 0 0;
+            -ms-transform-origin: 0 0;
+            transform-origin: 0 0;
+        }
+   .platinumribbon {
+            width: 100px; 
+            height: 30px; 
+            margin: 20px auto 0px;
+            position: relative;
+        
+            font: 14px/30px sans-serif; 
+            text-align: center;
+            text-transform: uppercase;
+            background: #d3d2cc;
+ color: #d3d2cc;
+            text-shadow: -2px 2px 4px rgba(0, 0, 0, 0.5),
+                2px -2px 0 rgba(255, 255, 255, 0.9);
+            -webkit-animation: main 250ms;
+            -moz-animation: main 250ms;
+            -ms-animation: main 250ms;
+            animation: main 250ms;
+        }
+#sponsors .grid-item img:hover + .platinumnoteribbon {
+    opacity: 1; 
+    transform: scale(1); 
+    animation: ribbonAnimation 0.5s ease; 
+}
+
+@keyframes ribbonAnimation {
+    0% { transform: scale(0.9); opacity: 0; }
+    100% { transform: scale(1); opacity: 1; }
+}
+        .platinumribbon i {
+            position: absolute;
+        }
+
+        .platinumribbon i:first-child, .platinumribbon i:nth-child(2) {
+            position: absolute;
+            left: -10px;
+            bottom: -10px;
+            z-index: -1;
+            border: 10px solid transparent;
+            border-right-color: #043140;
+
+            -webkit-animation: edge 500ms;
+            -moz-animation: edge 500ms;
+            -ms-animation: edge 500ms;
+            animation: edge 500ms;
+        }
+
+        .platinumribbon i:nth-child(2) {
+            left: auto;
+            right: -10px;
+            border-right-color: transparent;
+            border-left-color: #043140;
+        }
+
+        .platinumribbon i:nth-child(3), .platinumribbon i:last-child {
+            width: 10px;
+            bottom: -10px;
+            left: -20px;
+            z-index: -2;
+            border: 15px solid #AAA8A3;
+            border-left-color: transparent;
+
+            -webkit-animation: back 600ms;
+            -moz-animation: back 600ms;
+            -ms-animation: back 600ms;
+            animation: back 600ms;
+
+            -webkit-transform-origin: 100% 0;
+            -moz-transform-origin: 100% 0;
+            -ms-transform-origin: 100% 0;
+            transform-origin: 100% 0;
+        }
+
+        .platinumribbon i:last-child {
+            bottom: -10px;
+            left: auto;
+            right: -20px;
+            border: 15px solid #AAA8A3;
+            border-right-color: transparent;
+
+            -webkit-transform-origin: 0 0;
+            -moz-transform-origin: 0 0;
+            -ms-transform-origin: 0 0;
+            transform-origin: 0 0;
+        }
+
+
+   .goldribbon {
+            width: 100px; 
+            height: 30px; 
+            margin: 20px auto 0px;
+            position: relative;
+           
+            font: 14px/30px sans-serif; 
+            text-align: center;
+            text-transform: uppercase;
+            background: #d4af37;
+ color: #d4af37;
+            text-shadow: -2px 2px 4px rgba(0, 0, 0, 0.5),
+                2px -2px 0 rgba(255, 255, 255, 0.9);
+            -webkit-animation: main 250ms;
+            -moz-animation: main 250ms;
+            -ms-animation: main 250ms;
+            animation: main 250ms;
+        }
+#sponsors .grid-item img:hover + .goldnoteribbon {
+    opacity: 1; 
+    transform: scale(1); 
+    animation: ribbonAnimation 0.5s ease; 
+}
+
+@keyframes ribbonAnimation {
+    0% { transform: scale(0.9); opacity: 0; }
+    100% { transform: scale(1); opacity: 1; }
+}
+        .goldribbon i {
+            position: absolute;
+        }
+
+        .goldribbon i:first-child, .goldribbon i:nth-child(2) {
+            position: absolute;
+            left: -10px;
+            bottom: -10px;
+            z-index: -1;
+            border: 10px solid transparent;
+            border-right-color: #043140;
+
+            -webkit-animation: edge 500ms;
+            -moz-animation: edge 500ms;
+            -ms-animation: edge 500ms;
+            animation: edge 500ms;
+        }
+
+        .goldribbon i:nth-child(2) {
+            left: auto;
+            right: -10px;
+            border-right-color: transparent;
+            border-left-color: #043140;
+        }
+
+        .goldribbon i:nth-child(3), .goldribbon i:last-child {
+            width: 10px;
+            bottom: -10px;
+            left: -20px;
+            z-index: -2;
+            border: 15px solid #A37F2B;
+            border-left-color: transparent;
+
+            -webkit-animation: back 600ms;
+            -moz-animation: back 600ms;
+            -ms-animation: back 600ms;
+            animation: back 600ms;
+
+            -webkit-transform-origin: 100% 0;
+            -moz-transform-origin: 100% 0;
+            -ms-transform-origin: 100% 0;
+            transform-origin: 100% 0;
+        }
+
+        .goldribbon i:last-child {
+            bottom: -10px;
+            left: auto;
+            right: -20px;
+            border: 15px solid #A37F2B;
+            border-right-color: transparent;
+
+            -webkit-transform-origin: 0 0;
+            -moz-transform-origin: 0 0;
+            -ms-transform-origin: 0 0;
+            transform-origin: 0 0;
+        }
+
+
+   .keynoteribbon {
+            width: 100px; 
+            height: 30px; 
+            margin: 20px auto 0px;
+            position: relative;
+           
+            font: 14px/30px sans-serif; 
+            text-align: center;
+            text-transform: uppercase;
+            background:#ADD8E6;
+ color: #000;
+            text-shadow:     -3px 3px 5px rgba(0, 0, 0, 0.7), 
+    3px -3px 1px rgba(255, 255, 255, 1);
+            -webkit-animation: main 250ms;
+            -moz-animation: main 250ms;
+            -ms-animation: main 250ms;
+            animation: main 250ms;
+        }
+#sponsors .grid-item img:hover + .keynoteribbon {
+    opacity: 1; 
+    transform: scale(1); 
+    animation: ribbonAnimation 0.5s ease; 
+}
+
+@keyframes ribbonAnimation {
+    0% { transform: scale(0.9); opacity: 0; }
+    100% { transform: scale(1); opacity: 1; }
+}
+        .keynoteribbon i {
+            position: absolute;
+        }
+
+        .keynoteribbon i:first-child, .keynoteribbon i:nth-child(2) {
+            position: absolute;
+            left: -10px;
+            bottom: -10px;
+            z-index: -1;
+            border: 10px solid transparent;
+            border-right-color: #1a2f3f;
+
+            -webkit-animation: edge 500ms;
+            -moz-animation: edge 500ms;
+            -ms-animation: edge 500ms;
+            animation: edge 500ms;
+        }
+
+        .keynoteribbon i:nth-child(2) {
+            left: auto;
+            right: -10px;
+            border-right-color: transparent;
+            border-left-color: #043140;
+        }
+
+        .keynoteribbon i:nth-child(3), .keynoteribbon i:last-child {
+            width: 10px;
+            bottom: -10px;
+            left: -20px;
+            z-index: -2;
+            border: 15px solid #8BA9B9;
+            border-left-color: transparent;
+
+            -webkit-animation: back 600ms;
+            -moz-animation: back 600ms;
+            -ms-animation: back 600ms;
+            animation: back 600ms;
+
+            -webkit-transform-origin: 100% 0;
+            -moz-transform-origin: 100% 0;
+            -ms-transform-origin: 100% 0;
+            transform-origin: 100% 0;
+        }
+
+        .keynoteribbon i:last-child {
+            bottom: -10px;
+            left: auto;
+            right: -20px;
+            border: 15px solid #8BA9B9;
+            border-right-color: transparent;
+
+            -webkit-transform-origin: 0 0;
+            -moz-transform-origin: 0 0;
+            -ms-transform-origin: 0 0;
+            transform-origin: 0 0;
+        }
+
+  .presenterribbon {
+            width: 100px; 
+            height: 30px; 
+            margin: 20px auto 0px;
+            position: relative;
+           
+            font: 14px/30px sans-serif; 
+            text-align: center;
+            text-transform: uppercase;
+            background:#ffcc99;
+ color: #000;
+            text-shadow:     -3px 3px 5px rgba(0, 0, 0, 0.7), 
+    3px -3px 1px rgba(255, 255, 255, 1);
+            -webkit-animation: main 250ms;
+            -moz-animation: main 250ms;
+            -ms-animation: main 250ms;
+            animation: main 250ms;
+        }
+#sponsors .grid-item img:hover + .presenterribbon {
+    opacity: 1; 
+    transform: scale(1); 
+    animation: ribbonAnimation 0.5s ease; 
+}
+
+@keyframes ribbonAnimation {
+    0% { transform: scale(0.9); opacity: 0; }
+    100% { transform: scale(1); opacity: 1; }
+}
+        .presenterribbon i {
+            position: absolute;
+        }
+
+        .presenterribbon i:first-child, .presenterribbon i:nth-child(2) {
+            position: absolute;
+            left: -10px;
+            bottom: -10px;
+            z-index: -1;
+            border: 10px solid transparent;
+            border-right-color: #1a2f3f;
+
+            -webkit-animation: edge 500ms;
+            -moz-animation: edge 500ms;
+            -ms-animation: edge 500ms;
+            animation: edge 500ms;
+        }
+
+        .presenterribbon i:nth-child(2) {
+            left: auto;
+            right: -10px;
+            border-right-color: transparent;
+            border-left-color: #043140;
+        }
+
+        .presenterribbon i:nth-child(3), .presenterribbon i:last-child {
+            width: 10px;
+            bottom: -10px;
+            left: -20px;
+            z-index: -2;
+            border: 15px solid #fbab60;
+            border-left-color: transparent;
+
+            -webkit-animation: back 600ms;
+            -moz-animation: back 600ms;
+            -ms-animation: back 600ms;
+            animation: back 600ms;
+
+            -webkit-transform-origin: 100% 0;
+            -moz-transform-origin: 100% 0;
+            -ms-transform-origin: 100% 0;
+            transform-origin: 100% 0;
+        }
+
+        .presenterribbon i:last-child {
+            bottom: -10px;
+            left: auto;
+            right: -20px;
+            border: 15px solid #fbab60 ;
+            border-right-color: transparent;
+
+            -webkit-transform-origin: 0 0;
+            -moz-transform-origin: 0 0;
+            -ms-transform-origin: 0 0;
+            transform-origin: 0 0;
+        }
+
+        @-webkit-keyframes main {
+            0% { -webkit-transform: scaleX(0); }
+            100% { -webkit-transform: scaleX(1); }
+        }
+
+        @-webkit-keyframes edge {
+            0%, 50% { -webkit-transform: scaleY(0); }
+            100% { -webkit-transform: scaleY(1); }
+        }
+
+        @-webkit-keyframes back {
+            0%, 75% { -webkit-transform: scaleX(0); }
+            100% { -webkit-transform: scaleX(1); }
+        }
+
+        @-moz-keyframes main {
+            0% { -moz-transform: scaleX(0); }
+            100% { -moz-transform: scaleX(1); }
+        }
+
+        @-moz-keyframes edge {
+            0%, 50% { -moz-transform: scaleY(0); }
+            100% { -moz-transform: scaleY(1); }
+        }
+
+        @-moz-keyframes back {
+            0%, 75% { -moz-transform: scaleX(0); }
+            100% { -moz-transform: scaleX(1); }
+        }
+
+        @keyframes main {
+            0% { transform: scaleX(0); }
+            100% { transform: scaleX(1); }
+        }
+
+        @keyframes edge {
+            0%, 50% { transform: scaleY(0); }
+            100% { transform: scaleY(1); }
+        }
+
+        @keyframes back {
+            0%, 75% { transform: scaleX(0); }
+            100% { transform: scaleX(1); }
+        }
+   
           #agenda {
             background: url('../images/campus4.webp');
 		              
