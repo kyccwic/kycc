@@ -610,6 +610,13 @@ background, and business acumen fuel her unrelenting drive for solving complex b
         </div>
     </div>
 <script src="scripts/script.js"></script>
+	<script>$('.ribbon, .sponsorribbonlarge, .silverribbon, .doorribbon, .blueribbon, .platinumribbon, .goldribbon, .keynoteribbon, .presenterribbon').on('click', function() {	
+  var self = $(this),
+      newone = self.clone(true);
+  
+  self.before(newone);
+  $("." + self.attr("class") + ":last").remove();
+});</script>
 
 	
 </body>
