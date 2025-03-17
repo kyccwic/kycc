@@ -844,7 +844,7 @@ body::-webkit-scrollbar {
             -ms-animation: main 250ms;
             animation: main 250ms;
         }
-#sponsors .grid-item img:hover + .doornoteribbon {
+#sponsors .grid-item img:hover + .doorribbon {
     opacity: 1; 
     transform: scale(1); 
     animation: ribbonAnimation 0.5s ease; 
