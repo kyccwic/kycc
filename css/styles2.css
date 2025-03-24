@@ -1749,8 +1749,8 @@ body::-webkit-scrollbar {
 }
 	    
           #register {
-            background: url('../images/campus4.webp');
-		              
+            background: url('../images/AdobeStock_55123425.webp');
+		         height:100vh;     
             padding-bottom: 40px;
 	    background-position: center;
             background-repeat: no-repeat;
