@@ -1748,10 +1748,19 @@ body::-webkit-scrollbar {
 }
 }
 	    
-.career-fair-section {
-
-}
-
+          #register {
+            background: url('../images/campus4.webp');
+		              
+            padding-bottom: 40px;
+	    background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            scroll-margin-top: 75px;
+            color: black;
+            box-sizing: border-box;
+		  margin-bottom: 50px; 
+		  height: auto;
+	    }
    #career {
     display: flex;
     flex-direction: column;
