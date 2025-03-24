@@ -230,7 +230,7 @@ body::-webkit-scrollbar {
             font-size: 2em;
         }
 
-        #home, #about, #sponsors, #agenda, #speakers, #, r {
+      #register,  #home, #about, #sponsors, #agenda, #speakers, #, r {
             min-height: 100vh;
 			
 			}
