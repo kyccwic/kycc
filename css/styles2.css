@@ -1782,7 +1782,9 @@ min-width:300px;
             color: #fff;
             margin-bottom: 20px;
             font-weight: bold;
-		text-shadow: 2px 2px 8px lightblue;
+text-shadow: -1px -1px 0 #000, 1px -1px 0 #000,
+             -1px 1px 0 #000, 1px 1px 0 #000;
+
             
             background: linear-gradient(90deg, #0d0a0b, #0054b4);
             -webkit-background-clip: text;
